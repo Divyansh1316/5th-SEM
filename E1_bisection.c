@@ -1,3 +1,9 @@
+/*
+Name: Divyansh Dhaundiyal
+Section: D(G1)
+Rno: 31
+*/
+
 #include <stdio.h>
 #include <math.h>
 
@@ -11,26 +17,30 @@ void main()
 {
     float x0, x1, e;
     float x2 = (x0 + x1) / 2;
-    do
-    {
-        printf("Enter x0 and x1 : ");
-        scanf("%f %f", &x0, &x1);
-        printf("Enter error : ");
-        scanf("%f", &e);
-    } while (f(x0) * f(x1) >= 0);
 
-    do
+    printf("Enter x0 and x1 : ");
+    scanf("%f %f", &x0, &x1);
+    printf("Enter error : ");
+    scanf("%f", &e);
+    if (f(x0) * f(x1) < 0)
     {
-        x2 = (x0 + x1) / 2;
-        if ((f(x0) * f(x2)) < 0)
+        do
         {
-            x1 = x2;
-        }
-        else
-        {
-            x0 = x2;
-        }
-        printf("Root is : %f\n", x2);
+            x2 = (x0 + x1) / 2;
+            if ((f(x0) * f(x2)) < 0)
+            {
+                x1 = x2;
+            }
+            else
+            {
+                x0 = x2;
+            }
+            printf("Root is : %f\n", x2);
 
-    } while (fabs(f(x2)) > e);
+        } while (fabs(f(x2)) > e);
+    }
+    else
+    {
+        printf("Invalid guess");
+    }
 }
