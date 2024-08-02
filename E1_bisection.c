@@ -1,11 +1,10 @@
-/*
-Name: Divyansh Dhaundiyal
-Section: D(G1)
-Rno: 31
-*/
-
 #include <stdio.h>
 #include <math.h>
+
+void n()
+{
+    printf("Name: Divyansh Dhaundiyal\nSection: D(G1)\nRno: 31\n\n");
+}
 
 float f(float x)
 {
@@ -17,6 +16,8 @@ void main()
 {
     float x0, x1, e;
     float x2 = (x0 + x1) / 2;
+
+    n();
 
     printf("Enter x0 and x1 : ");
     scanf("%f %f", &x0, &x1);
