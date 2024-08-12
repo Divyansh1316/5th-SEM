@@ -1,0 +1,19 @@
+display first name,lastname as fullname ,annual salary and exp of employee
+select first_name || ' ' || last_name as "Name",salary,salary*12 Annual_sal ,round((SYSDATE-hire_date)/365) || ' ' || 'years' as "Experience" from hr.employees
+
+display unique names of all the employees
+select distinct first_name from hr.employees
+
+display first_name and salaries of those employees whose salary is >10000
+select first_name,salary from hr.employees where salary>10000 
+
+display the name of employee whose salary lies between 10k-20k
+select first_name,salary from hr.employees where salary between 10000 and 20000
+
+display salary 1st name of those emp whose salary lie either in 10k,20k,30k,40k
+select first_name,salary from hr.employees where salary in (10000,20000,30000,40000)
+
+display the name of emp whose name starts with J
+J% 
+if searching for JAM(length is 3) then J__
+select first_name,salary from hr.employees where first_name like 'J%'
