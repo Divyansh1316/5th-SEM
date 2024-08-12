@@ -17,3 +17,9 @@ display the name of emp whose name starts with J
 J% 
 if searching for JAM(length is 3) then J__
 select first_name,salary from hr.employees where first_name like 'J%'
+
+display 1st name last name,salaries of all the employees in ascending order acc to the salaries
+select first_name,last_name,salary from hr.employees order by salary asc/desc
+
+display 1st name last name,salaries of all the employees whose salary is >4000 in ascending order acc to the salaries 
+select first_name,last_name,salary from hr.employees where salary>4000 order by salary desc
