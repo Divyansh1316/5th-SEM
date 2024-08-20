@@ -14,7 +14,7 @@ float f(float x)
 
 void main()
 {
-    int i=0,n,flag;
+    int i = 0, n, flag;
     float a, b, e;
     float c = (a * f(b) - b * f(a)) / f(b) - f(a);
 
@@ -35,18 +35,16 @@ void main()
 
         printf("%f\t%f\t%f\n", a, b, c);
 
-        a=b;
-        b=c;
+        a = b;
+        b = c;
 
-
-
-    }while(fabs(f(c)) > e && i<n );
-    if(fabs(f(c)) <= e )
+    } while (fabs(f(c)) > e && i < n);
+    if (fabs(f(c)) <= e)
     {
         printf("\nFinal approximate root after %d iterations is : %f\n", i, c);
     }
     else
     {
-        printf("\Approximate root not converged");
+        printf("\nMaximum iterations reached, approximate root not converged");
     }
 }
