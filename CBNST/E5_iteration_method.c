@@ -72,7 +72,7 @@ void main()
             int count = 0;
             float c;
 
-            printf("\n\nIterations\t\tC\n\n");
+            printf("\n\nIterations\t\tXn\n\n");
 
             do
             {
