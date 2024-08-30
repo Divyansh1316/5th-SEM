@@ -72,14 +72,14 @@ void main()
             int count = 0;
             float c;
 
-            printf("\n\nIterations\t\tA\t\tC\n\n");
+            printf("\n\nIterations\t\tC\n\n");
 
             do
             {
                 count++;
 
                 c = f2(a);
-                printf("x%d\t\t\t%f\t%f\n", count, a, c);
+                printf("x%d\t\t\t%f\n", count, c);
 
                 if (a == c)
                 {
@@ -99,14 +99,14 @@ void main()
 
             printf("\n\nEquation is : x = acos((3 * x) - 1)");
 
-            printf("\n\nIterations\t\tA\t\tC\n\n");
+            printf("\n\nIterations\t\tC\n\n");
 
             do
             {
                 count++;
 
                 c = f3(a);
-                printf("x%d\t\t\t%f\t%f\n", count, a, c);
+                printf("x%d\t\t\t%f\n", count, c);
 
                 if (a == c)
                 {
