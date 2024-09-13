@@ -3,79 +3,83 @@
 
 void details()
 {
-    printf("Name: Divyansh Dhaundiyal\nSection: D(G1)\nRno: 31\n\nGauss Elimination Method\n\n");
+	printf("Name: Divyansh Dhaundiyal\nSection: D(G1)\nRno: 31\n\nGauss Elimination Method\n\n");
 }
 
 void main()
 {
-    details();
+	details();
 	int size;
 	printf("Enter size of matrix : ");
-	scanf("%d",&size);
-	float arr[size][size+1];
+	scanf("%d", &size);
+	float arr[size][size + 1];
 
-		    printf("Enter elements of matrix : ");
+	printf("Enter elements of matrix : \n");
 
-	for(int i=0;i<size;i++)
+	for (int i = 0; i < size; i++)
 	{
-		for(int j=0;j<size+1;j++)
+		for (int j = 0; j < size + 1; j++)
 		{
-			scanf("%f",&arr[i][j]);	
-		}			
+			scanf("%f", &arr[i][j]);
+		}
 	}
-	
-	for(int i=0;i<size;i++)
+
+	printf("\nOriginal matrix :\n");
+	for (int i = 0; i < size; i++)
 	{
-		for(int j=0;j<size+1;j++)
+		for (int j = 0; j < size + 1; j++)
 		{
-			printf("%f ",arr[i][j]);	
-		}			
+			printf("%f ", arr[i][j]);
+		}
 		printf("\n");
 	}
-	
-	for(int i=0;i<size;i++)
+
+	for (int i = 1; i < size; i++)
 	{
-		if(arr[i][0]!=1)
+		float mul = (arr[i][0] / arr[0][0]);
+
+		for (int j = 0; j < size + 1; j++)
 		{
-			int a=arr[i][0];
-			for(int j=0;j<size+1;j++)
-			{
-				arr[i][j]=arr[i][j]/a;
-			}
+			arr[i][j] = arr[i][j] - mul * arr[0][j];
 		}
-	}	
-
-	printf("\n");	
-
-	for(int i=0;i<size;i++)
-	{
-		arr[1][i]-=arr[0][i];
-		arr[2][i]-=arr[0][i];
 	}
 
-	for(int i=1;i<size;i++)
+	printf("\nIntermediate matrix :\n");
+	for (int i = 0; i < size; i++)
 	{
-		if(arr[i][1]!=1)
+		for (int j = 0; j < size + 1; j++)
 		{
-			float a=arr[i][1];
-			for(int j=1;j<size+1;j++)
-			{
-				arr[i][j]=arr[i][j]/a;
-			}
+			printf("%f ", arr[i][j]);
 		}
-	}	
-	
-	for(int i=0;i<size;i++)
-	{
-		arr[2][i]-=arr[1][i];
-	}
-	
-	for(int i=0;i<size;i++)
-	{
-		for(int j=0;j<size+1;j++)
-		{
-			printf("%f ",arr[i][j]);	
-		}			
 		printf("\n");
 	}
+
+	for (int i = 2; i < size; i++)
+	{
+		float mul = (arr[i][1] / arr[1][1]);
+
+		for (int j = 0; j < size + 1; j++)
+		{
+			arr[i][j] = arr[i][j] - mul * arr[1][j];
+		}
+	}
+
+	printf("\nAugumented matrix :\n");
+	for (int i = 0; i < size; i++)
+	{
+		for (int j = 0; j < size + 1; j++)
+		{
+			printf("%f ", arr[i][j]);
+		}
+		printf("\n");
+	}
+
+	int z = arr[size - 1][size] / arr[size - 1][size - 1];
+	printf("\nZ : %d ", z);
+
+	int y = (arr[size - 2][size] - (z * arr[size - 2][size - 1])) / arr[size - 2][size - 2];
+	printf("\nY : %d ", y);
+
+	int x = (arr[size - 3][size] - (z * arr[size - 3][size - 1]) - (y * arr[size - 3][size - 2])) / arr[size - 3][size - 3];
+	printf("\nX : %d ", x);
 }
