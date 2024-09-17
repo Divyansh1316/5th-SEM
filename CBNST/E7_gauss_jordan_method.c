@@ -108,12 +108,13 @@ void main()
 		printf("\n");
 	}
 
-	int z = arr[size - 1][size] / arr[size - 1][size - 1];
-	printf("\nZ : %d ", z);
+	float z = arr[size - 1][size] / arr[size - 1][size - 1];
 
-	int y = (arr[size - 2][size] - (z * arr[size - 2][size - 1])) / arr[size - 2][size - 2];
-	printf("\nY : %d ", y);
-
-	int x = (arr[size - 3][size] - (z * arr[size - 3][size - 1]) - (y * arr[size - 3][size - 2])) / arr[size - 3][size - 3];
-	printf("\nX : %d ", x);
+	float y = (arr[size - 2][size] - (z * arr[size - 2][size - 1])) / arr[size - 2][size - 2];
+	
+	float x = (arr[size - 3][size] - (z * arr[size - 3][size - 1]) - (y * arr[size - 3][size - 2])) / arr[size - 3][size - 3];
+	
+	printf("\nX : %f ", x);
+	printf("\nY : %f ", y);
+	printf("\nZ : %f ", z);
 }
