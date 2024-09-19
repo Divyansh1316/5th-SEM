@@ -64,7 +64,7 @@ void main()
 		}
 	}
 
-	printf("\nFinal matrix :\n");
+	printf("\nUpper Triangular matrix :\n");
 	for (int i = 0; i < size; i++)
 	{
 		for (int j = 0; j < size + 1; j++)
