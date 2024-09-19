@@ -75,11 +75,12 @@ void main()
 	}
 
 	int z = arr[size - 1][size] / arr[size - 1][size - 1];
-	printf("\nZ : %d ", z);
 
 	int y = (arr[size - 2][size] - (z * arr[size - 2][size - 1])) / arr[size - 2][size - 2];
-	printf("\nY : %d ", y);
 
 	int x = (arr[size - 3][size] - (z * arr[size - 3][size - 1]) - (y * arr[size - 3][size - 2])) / arr[size - 3][size - 3];
+
 	printf("\nX : %d ", x);
+	printf("\nY : %d ", y);
+	printf("\nZ : %d ", z);
 }
