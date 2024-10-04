@@ -4,7 +4,6 @@
 void details()
 {
     printf("Name: Shubhankar Singh Sisodia\nSection: D\nRno: 65\n\nNewtons Forward Interpolation\n\n");
-    
 }
 int fact(int x)
 {
@@ -41,10 +40,11 @@ int main()
     printf("\n");
     int x[size];
     int y[size];
+    
+    printf("Enter year and population :\n");
     for (int i = 0; i < size; i++)
     {
-        scanf("%d", &x[i]);
-        scanf("%d", &y[i]);
+        scanf("%d %d", &x[i],&y[i]);
     }
 
     int diff = x[1] - x[0];
