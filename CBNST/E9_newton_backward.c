@@ -3,8 +3,8 @@
 
 void details()
 {
-        printf("Name: Divyansh Dhaundiyal\nSection: D\nRno: 31\n\nNewtons Backward Interpolation\n\n");
-        }
+    printf("Name: Divyansh Dhaundiyal\nSection: D(G1)\nRno: 31\n\nNewton's Backward Interpolation Method\n\n");
+}
 int fact(int x)
 {
     if (x == 0 || x == 1)
@@ -32,14 +32,15 @@ int main()
 {
     int size;
     details();
-    printf("Enter the number of arguments:");
+    printf("Enter the number of arguments :");
     scanf("%d", &size);
     int point;
-    printf("Enter the value of x:");
+    printf("\nEnter the value of x :");
     scanf("%d", &point);
-    printf("\n");
     int x[size];
     int y[size];
+    printf("\nEnter years and population :\n");
+
     for (int i = 0; i < size; i++)
     {
         scanf("%d", &x[i]);
@@ -112,14 +113,14 @@ int main()
         }
 
         printf("\n");
-        float answ;
+        float answ = 0;
         float u = (float)(point - x[size - 1]) / diff;
         // printf("%f\n\n", u);
         for (int i = 0; i < size; i++)
         {
             answ += (fx[i] * u_value(u, i)) / fact(i);
         }
-        printf("Population at %d =%f\n", point, answ);
+        printf("Population at %d = %f\n", point, answ);
     }
     else
     {
