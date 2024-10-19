@@ -3,7 +3,7 @@
 
 void details()
 {
-    printf("Name: Shubhankar Singh Sisodia\nSection: D\nRno: 65\n\nNewtons Forward Interpolation\n\n");
+    printf("Name: Divyansh Dhaundiyal\nSection: D(G1)\nRno: 31\n\nNewton's Forward Interpolation Method\n\n");
 }
 int fact(int x)
 {
@@ -32,19 +32,18 @@ int main()
 {
     int size;
     details();
-    printf("Enter the number of arguments:");
+    printf("Enter the number of arguments :");
     scanf("%d", &size);
     int point;
-    printf("Enter the value of x:");
+    printf("\nEnter the value of x :");
     scanf("%d", &point);
-    printf("\n");
     int x[size];
     int y[size];
-    
-    printf("Enter year and population :\n");
+    printf("\nEnter years and population :\n");
     for (int i = 0; i < size; i++)
     {
-        scanf("%d %d", &x[i],&y[i]);
+        scanf("%d", &x[i]);
+        scanf("%d", &y[i]);
     }
 
     int diff = x[1] - x[0];
@@ -113,7 +112,7 @@ int main()
         }
 
         printf("\n");
-        float answ;
+        float answ = 0;
         float u = (float)(point - x[0]) / diff;
         // printf("%f\n\n", u);
         for (int i = 0; i < size; i++)
