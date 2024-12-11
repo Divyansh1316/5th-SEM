@@ -14,21 +14,25 @@ float fn(float x, float y)
 void main()
 {
     details();
-    float n, a, b, y = 1.0, yn = 0.0, x = 0.0;
-    printf("Enter a and b : ");
-    scanf("%f %f", &a, &b);
+    float a, b, y, yn = 0.0, x;
+    int n;
+    printf("Enter x and y : ");
+    scanf("%f %f", &x, &y);
+    printf("Enter value of x u want to approximate  : ");
+    scanf("%f", &b);
     printf("Enter intervals : ");
-    scanf("%f", &n);
+    scanf("%d", &n);
 
-    float h = (b - a) / n;
+    float h = (b - x) / n;
 
     printf("\nIteration\tx\t\ty");
     for (int i = 0; i < n; i++)
     {
         yn = y + h * fn(x, y);
-        printf("\n%d\t\t%f\t%f", i + 1, x, yn);
+        printf("\n%d\t\t%f\t%f", i + 1, x, y);
         y = yn;
         x = x + h;
     }
+    printf("\n%d\t\t%f\t%f", n + 1, x, yn);
     printf("\n\nFinal approximate solution at x = %f : %f", x, yn);
 }

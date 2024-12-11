@@ -34,7 +34,7 @@ void simpson3by8_rule(double a, double b, int n)
     }
 
     integral = (3 * h / 8) * integral;
-    integral * 3;
+    // integral * 3;
     printf("\nThe approximate area under the curve is : %.4lf\n", integral);
 }
 

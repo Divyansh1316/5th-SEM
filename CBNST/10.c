@@ -48,3 +48,45 @@ int main()
 
     return 0;
 }
+
+/*
+#include <stdio.h>
+#include <math.h>
+double f(double x){
+    return 1/(1+(x*x));
+}
+double trapeziodal(double a,double b,int n){
+    double integral=0,x,y;
+    double h=(b-a)/n;
+    printf("Step\tX\tY\n");
+    for(int i=0;i<=n;i++)
+    {
+        x=a+(i*h);
+        y=f(x);
+        printf("\nX%d\t%lf\t%lf",i,x,y);
+        if(i==0 || i==n)
+        {
+            integral+=(y/2);
+        }
+        else
+        {
+            integral+=y;
+        }
+    }
+    integral*=h;
+    printf("\nApprox area under the curve : %lf",integral);
+}
+int main() {
+    double a,b;
+    int n;
+    printf("Enter a : ");
+    scanf("%lf",&a);
+    printf("Enter b : ");
+    scanf("%lf",&b);
+    printf("Enter intervals : ");
+    scanf("%d",&n);
+    trapeziodal(a,b,n);
+
+    return 0;
+}
+*/
